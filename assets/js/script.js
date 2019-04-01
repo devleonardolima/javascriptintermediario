@@ -30,3 +30,10 @@ function sairButton(){
 function moveButton(){
     console.log("Tu continua passando por cima de min!")
 }
+
+function pressKey(event){
+    alert("Você apertou a tecla"+event.keyCode);
+    if(event.keyCode == 13){
+        console.log("Mesagem enviada");
+    }
+}
