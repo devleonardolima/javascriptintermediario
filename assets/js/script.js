@@ -37,3 +37,54 @@ function pressKey(event){
         console.log("Mesagem enviada");
     }
 }
+
+function welcome(){
+    alert("Bem vindo!");
+}
+
+function focou(){
+    console.log("A caixa de texto foi focada!");
+}
+
+function desfocou(){
+    console.log("A caixa de texto foi desfocada!");
+    var texto = document.getElementById('texto').value;
+    alert("O valor da caixa é: "+texto);
+}
+
+function mudarOption(dado){
+    alert("A opção foi mudada para"+dado.value);
+}
+
+function addBola(){
+    var bola = document.createElement("div");
+    bola.setAttribute("class", "bola");
+    var p1 = Math.floor(Math.random() * 1317);
+    var p2 = Math.floor(Math.random() * 560);
+    bola.setAttribute("style", "left:"+p1+"px;top:"+p2+"px;");
+    bola.setAttribute("onclick", "estourar(this);");
+
+    document.body.appendChild(bola);
+}
+
+function estourar(elemento){
+    document.body.removeChild(elemento);
+}
+
+function iniciar(){
+    setInterval(addBola, 2);
+}
+
+function validar(){
+    var numero = document.getElementById("numero").value;
+    if(!isNaN(numero)){
+        alert("Digite apenas numero por favor");
+        return false;
+    }else if(numero.length > 2){
+        alert("Você digitou um numero com mais de dois algarismos!");
+        return false;
+    }else{
+        alert("Parabéns você é um usuario decente");
+        return true;
+    }
+}

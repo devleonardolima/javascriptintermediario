@@ -7,11 +7,11 @@
     <title>JavaScript Intermediário</title>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </head>
-<body onload="welcome()">
-    <a href="mouse_events.html">Eventos de Mouse</a>
-    <a href="keyboard_events.html">Eventos de Teclado</a>
-    <a href="form_events.html">Eventos de Formulário</a>
-    <a href="jogo_bola.html">Jogo da Bola</a>
-    <a href="form_validacao.html">Formulario com Validação</a>
+<body>
+    <form action="" onsubmit="return validar()">
+        <label for="numero">Digite um numero (mais de dois algarismos)</label>
+        <input type="text" name="numero" id="numero">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
